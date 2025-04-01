@@ -92,6 +92,7 @@
             MainMenuStrip = menuStrip1;
             Name = "frm_menu";
             Text = "Menu";
+            Load += frm_menu_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

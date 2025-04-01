@@ -43,7 +43,7 @@
             btn_entrar.Name = "btn_entrar";
             btn_entrar.Size = new Size(75, 23);
             btn_entrar.TabIndex = 0;
-            btn_entrar.Text = "ENTRAR";
+            btn_entrar.Text = "Entrar";
             btn_entrar.UseVisualStyleBackColor = true;
             // 
             // btn_Cancelar
@@ -52,7 +52,7 @@
             btn_Cancelar.Name = "btn_Cancelar";
             btn_Cancelar.Size = new Size(75, 23);
             btn_Cancelar.TabIndex = 1;
-            btn_Cancelar.Text = "CANCELAR";
+            btn_Cancelar.Text = "Cancelar";
             btn_Cancelar.UseVisualStyleBackColor = true;
             // 
             // btn_redefinir
@@ -63,6 +63,7 @@
             btn_redefinir.TabIndex = 2;
             btn_redefinir.Text = "Redefinir Senha";
             btn_redefinir.UseVisualStyleBackColor = true;
+            btn_redefinir.Click += btn_redefinir_Click;
             // 
             // lbl_usuario
             // 

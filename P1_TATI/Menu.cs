@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace P1_TATI
 {
-    public partial class frm_menu: Form
+    public partial class frm_menu : Form
     {
         public frm_menu()
         {
             InitializeComponent();
+        }
+
+        private void frm_menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -18,5 +18,15 @@ namespace P1_TATI
             frm_Cadastro objTela = new frm_Cadastro();
             objTela.ShowDialog();
         }
+
+        private void frm_index_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

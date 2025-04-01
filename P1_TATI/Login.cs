@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 namespace P1_TATI
 {
-    public partial class frm_Login: Form
+    public partial class frm_Login : Form
     {
         public frm_Login()
         {
             InitializeComponent();
+        }
+
+        private void btn_redefinir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

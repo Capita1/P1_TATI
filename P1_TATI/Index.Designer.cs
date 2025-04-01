@@ -37,21 +37,21 @@
             // 
             // btn_login
             // 
-            btn_login.Location = new Point(317, 244);
-            btn_login.Margin = new Padding(3, 4, 3, 4);
+            btn_login.Anchor = AnchorStyles.None;
+            btn_login.Location = new Point(318, 226);
             btn_login.Name = "btn_login";
-            btn_login.Size = new Size(86, 31);
+            btn_login.Size = new Size(75, 23);
             btn_login.TabIndex = 0;
-            btn_login.Text = "Login";
+            btn_login.Text = "Entrar";
             btn_login.UseVisualStyleBackColor = true;
             btn_login.Click += button1_Click;
             // 
             // btn_Cadastrar
             // 
-            btn_Cadastrar.Location = new Point(317, 283);
-            btn_Cadastrar.Margin = new Padding(3, 4, 3, 4);
+            btn_Cadastrar.Anchor = AnchorStyles.None;
+            btn_Cadastrar.Location = new Point(318, 255);
             btn_Cadastrar.Name = "btn_Cadastrar";
-            btn_Cadastrar.Size = new Size(86, 31);
+            btn_Cadastrar.Size = new Size(75, 23);
             btn_Cadastrar.TabIndex = 1;
             btn_Cadastrar.Text = "Cadastrar";
             btn_Cadastrar.UseVisualStyleBackColor = true;
@@ -59,41 +59,43 @@
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 24F);
-            label1.Location = new Point(87, -7);
+            label1.Location = new Point(135, 9);
             label1.Name = "label1";
-            label1.Size = new Size(580, 54);
+            label1.Size = new Size(471, 45);
             label1.TabIndex = 2;
             label1.Text = "Sistema de Acesso de Imprensa";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(213, 45);
+            label2.Location = new Point(245, 48);
             label2.Name = "label2";
-            label2.Size = new Size(282, 20);
+            label2.Size = new Size(223, 15);
             label2.TabIndex = 3;
             label2.Text = "Acesso restrito à profissinais de imprensa";
             // 
             // frm_index
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SteelBlue;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(743, 322);
+            ClientSize = new Size(734, 290);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btn_Cadastrar);
             Controls.Add(btn_login);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frm_index";
             Text = "Informações para Imprensa";
+            Load += frm_index_Load;
             ResumeLayout(false);
             PerformLayout();
         }
