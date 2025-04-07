@@ -40,15 +40,15 @@
             txtNome = new TextBox();
             txtSenha = new TextBox();
             txtEmail = new TextBox();
-            textBox5 = new TextBox();
+            txtTelefone = new TextBox();
             grb_cadastro = new GroupBox();
-            date_Nasc = new DateTimePicker();
+            txtOrg = new TextBox();
+            dateNasc = new DateTimePicker();
             label2 = new Label();
-            pais_cmbBox = new ComboBox();
-            org_cmbBox = new ComboBox();
+            paisCmb = new ComboBox();
             label1 = new Label();
-            radio_Masc = new RadioButton();
-            radio_Fem = new RadioButton();
+            radioMasc = new RadioButton();
+            radioFem = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             grb_cadastro.SuspendLayout();
             SuspendLayout();
@@ -57,9 +57,9 @@
             // 
             lbl_nome.AutoSize = true;
             lbl_nome.ImageAlign = ContentAlignment.MiddleRight;
-            lbl_nome.Location = new Point(18, 35);
+            lbl_nome.Location = new Point(16, 26);
             lbl_nome.Name = "lbl_nome";
-            lbl_nome.Size = new Size(123, 20);
+            lbl_nome.Size = new Size(99, 15);
             lbl_nome.TabIndex = 0;
             lbl_nome.Text = "Nome Completo:";
             // 
@@ -67,9 +67,9 @@
             // 
             lbl_senha.AutoSize = true;
             lbl_senha.ImageAlign = ContentAlignment.MiddleRight;
-            lbl_senha.Location = new Point(18, 76);
+            lbl_senha.Location = new Point(16, 57);
             lbl_senha.Name = "lbl_senha";
-            lbl_senha.Size = new Size(52, 20);
+            lbl_senha.Size = new Size(42, 15);
             lbl_senha.TabIndex = 2;
             lbl_senha.Text = "Senha:";
             // 
@@ -77,9 +77,9 @@
             // 
             lbl_pais.AutoSize = true;
             lbl_pais.ImageAlign = ContentAlignment.MiddleRight;
-            lbl_pais.Location = new Point(18, 273);
+            lbl_pais.Location = new Point(16, 205);
             lbl_pais.Name = "lbl_pais";
-            lbl_pais.Size = new Size(37, 20);
+            lbl_pais.Size = new Size(31, 15);
             lbl_pais.TabIndex = 3;
             lbl_pais.Text = "País:";
             // 
@@ -87,9 +87,9 @@
             // 
             lbl_emissora.AutoSize = true;
             lbl_emissora.ImageAlign = ContentAlignment.MiddleRight;
-            lbl_emissora.Location = new Point(18, 312);
+            lbl_emissora.Location = new Point(16, 234);
             lbl_emissora.Name = "lbl_emissora";
-            lbl_emissora.Size = new Size(161, 20);
+            lbl_emissora.Size = new Size(128, 15);
             lbl_emissora.TabIndex = 5;
             lbl_emissora.Text = "Emissora/Organização:";
             // 
@@ -97,9 +97,9 @@
             // 
             lbl_telefone.AutoSize = true;
             lbl_telefone.ImageAlign = ContentAlignment.MiddleRight;
-            lbl_telefone.Location = new Point(18, 153);
+            lbl_telefone.Location = new Point(16, 115);
             lbl_telefone.Name = "lbl_telefone";
-            lbl_telefone.Size = new Size(69, 20);
+            lbl_telefone.Size = new Size(54, 15);
             lbl_telefone.TabIndex = 6;
             lbl_telefone.Text = "Telefone:";
             // 
@@ -107,9 +107,9 @@
             // 
             lbl_email.AutoSize = true;
             lbl_email.ImageAlign = ContentAlignment.MiddleRight;
-            lbl_email.Location = new Point(18, 115);
+            lbl_email.Location = new Point(16, 86);
             lbl_email.Name = "lbl_email";
-            lbl_email.Size = new Size(55, 20);
+            lbl_email.Size = new Size(44, 15);
             lbl_email.TabIndex = 7;
             lbl_email.Text = "E-mail:";
             // 
@@ -117,10 +117,9 @@
             // 
             btn_cadastrar.BackColor = SystemColors.HotTrack;
             btn_cadastrar.ForeColor = Color.White;
-            btn_cadastrar.Location = new Point(490, 396);
-            btn_cadastrar.Margin = new Padding(3, 4, 3, 4);
+            btn_cadastrar.Location = new Point(429, 297);
             btn_cadastrar.Name = "btn_cadastrar";
-            btn_cadastrar.Size = new Size(86, 31);
+            btn_cadastrar.Size = new Size(75, 23);
             btn_cadastrar.TabIndex = 8;
             btn_cadastrar.Text = "Cadastrar";
             btn_cadastrar.UseVisualStyleBackColor = false;
@@ -128,10 +127,9 @@
             // 
             // btn_limpar
             // 
-            btn_limpar.Location = new Point(595, 396);
-            btn_limpar.Margin = new Padding(3, 4, 3, 4);
+            btn_limpar.Location = new Point(521, 297);
             btn_limpar.Name = "btn_limpar";
-            btn_limpar.Size = new Size(86, 31);
+            btn_limpar.Size = new Size(75, 23);
             btn_limpar.TabIndex = 9;
             btn_limpar.Text = "Limpar";
             btn_limpar.UseVisualStyleBackColor = true;
@@ -139,57 +137,52 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(523, 35);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(458, 26);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(145, 155);
+            pictureBox1.Size = new Size(127, 116);
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(147, 32);
-            txtNome.Margin = new Padding(3, 4, 3, 4);
+            txtNome.Location = new Point(129, 24);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(348, 27);
+            txtNome.Size = new Size(305, 23);
             txtNome.TabIndex = 11;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(147, 73);
-            txtSenha.Margin = new Padding(3, 4, 3, 4);
+            txtSenha.Location = new Point(129, 55);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(348, 27);
+            txtSenha.Size = new Size(305, 23);
             txtSenha.TabIndex = 13;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(147, 116);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Location = new Point(129, 87);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(348, 27);
+            txtEmail.Size = new Size(305, 23);
             txtEmail.TabIndex = 14;
             // 
-            // textBox5
+            // txtTelefone
             // 
-            textBox5.Location = new Point(147, 151);
-            textBox5.Margin = new Padding(3, 4, 3, 4);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(348, 27);
-            textBox5.TabIndex = 15;
+            txtTelefone.Location = new Point(129, 113);
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(305, 23);
+            txtTelefone.TabIndex = 15;
             // 
             // grb_cadastro
             // 
             grb_cadastro.Anchor = AnchorStyles.None;
-            grb_cadastro.Controls.Add(date_Nasc);
+            grb_cadastro.Controls.Add(txtOrg);
+            grb_cadastro.Controls.Add(dateNasc);
             grb_cadastro.Controls.Add(label2);
-            grb_cadastro.Controls.Add(pais_cmbBox);
-            grb_cadastro.Controls.Add(org_cmbBox);
+            grb_cadastro.Controls.Add(paisCmb);
             grb_cadastro.Controls.Add(label1);
-            grb_cadastro.Controls.Add(radio_Masc);
-            grb_cadastro.Controls.Add(textBox5);
+            grb_cadastro.Controls.Add(radioMasc);
+            grb_cadastro.Controls.Add(txtTelefone);
             grb_cadastro.Controls.Add(txtEmail);
-            grb_cadastro.Controls.Add(radio_Fem);
+            grb_cadastro.Controls.Add(radioFem);
             grb_cadastro.Controls.Add(txtSenha);
             grb_cadastro.Controls.Add(btn_limpar);
             grb_cadastro.Controls.Add(btn_cadastrar);
@@ -201,89 +194,87 @@
             grb_cadastro.Controls.Add(lbl_emissora);
             grb_cadastro.Controls.Add(lbl_senha);
             grb_cadastro.Controls.Add(lbl_pais);
-            grb_cadastro.Location = new Point(11, 5);
-            grb_cadastro.Margin = new Padding(3, 4, 3, 4);
+            grb_cadastro.Location = new Point(10, 4);
             grb_cadastro.Name = "grb_cadastro";
-            grb_cadastro.Padding = new Padding(3, 4, 3, 4);
-            grb_cadastro.Size = new Size(688, 435);
+            grb_cadastro.Size = new Size(602, 326);
             grb_cadastro.TabIndex = 16;
             grb_cadastro.TabStop = false;
             grb_cadastro.Text = "Cadastro de imprensa";
             grb_cadastro.Enter += grb_cadastro_Enter;
             // 
-            // date_Nasc
+            // txtOrg
             // 
-            date_Nasc.Location = new Point(185, 229);
-            date_Nasc.Margin = new Padding(3, 4, 3, 4);
-            date_Nasc.Name = "date_Nasc";
-            date_Nasc.Size = new Size(151, 27);
-            date_Nasc.TabIndex = 22;
+            txtOrg.Location = new Point(162, 230);
+            txtOrg.Name = "txtOrg";
+            txtOrg.Size = new Size(133, 23);
+            txtOrg.TabIndex = 23;
+            // 
+            // dateNasc
+            // 
+            dateNasc.Location = new Point(162, 172);
+            dateNasc.Name = "dateNasc";
+            dateNasc.Size = new Size(133, 23);
+            dateNasc.TabIndex = 22;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.ImageAlign = ContentAlignment.MiddleRight;
-            label2.Location = new Point(18, 236);
+            label2.Location = new Point(16, 177);
             label2.Name = "label2";
-            label2.Size = new Size(145, 20);
+            label2.Size = new Size(115, 15);
             label2.TabIndex = 20;
             label2.Text = "Data de nascimento:";
             // 
-            // pais_cmbBox
+            // paisCmb
             // 
-            pais_cmbBox.FormattingEnabled = true;
-            pais_cmbBox.Location = new Point(185, 269);
-            pais_cmbBox.Name = "pais_cmbBox";
-            pais_cmbBox.Size = new Size(151, 28);
-            pais_cmbBox.TabIndex = 19;
-            // 
-            // org_cmbBox
-            // 
-            org_cmbBox.FormattingEnabled = true;
-            org_cmbBox.Location = new Point(185, 309);
-            org_cmbBox.Name = "org_cmbBox";
-            org_cmbBox.Size = new Size(151, 28);
-            org_cmbBox.TabIndex = 18;
+            paisCmb.FormattingEnabled = true;
+            paisCmb.Location = new Point(162, 202);
+            paisCmb.Margin = new Padding(3, 2, 3, 2);
+            paisCmb.Name = "paisCmb";
+            paisCmb.Size = new Size(133, 23);
+            paisCmb.TabIndex = 19;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.ImageAlign = ContentAlignment.MiddleRight;
-            label1.Location = new Point(21, 356);
+            label1.Location = new Point(18, 267);
             label1.Name = "label1";
-            label1.Size = new Size(44, 20);
+            label1.Size = new Size(35, 15);
             label1.TabIndex = 17;
             label1.Text = "Sexo:";
             // 
-            // radio_Masc
+            // radioMasc
             // 
-            radio_Masc.AutoSize = true;
-            radio_Masc.Location = new Point(168, 355);
-            radio_Masc.Name = "radio_Masc";
-            radio_Masc.Size = new Size(97, 24);
-            radio_Masc.TabIndex = 16;
-            radio_Masc.TabStop = true;
-            radio_Masc.Text = "Masculino";
-            radio_Masc.UseVisualStyleBackColor = true;
+            radioMasc.AutoSize = true;
+            radioMasc.Location = new Point(147, 266);
+            radioMasc.Margin = new Padding(3, 2, 3, 2);
+            radioMasc.Name = "radioMasc";
+            radioMasc.Size = new Size(80, 19);
+            radioMasc.TabIndex = 16;
+            radioMasc.TabStop = true;
+            radioMasc.Text = "Masculino";
+            radioMasc.UseVisualStyleBackColor = true;
             // 
-            // radio_Fem
+            // radioFem
             // 
-            radio_Fem.AutoSize = true;
-            radio_Fem.Location = new Point(71, 355);
-            radio_Fem.Name = "radio_Fem";
-            radio_Fem.Size = new Size(91, 24);
-            radio_Fem.TabIndex = 10;
-            radio_Fem.TabStop = true;
-            radio_Fem.Text = "Feminino";
-            radio_Fem.UseVisualStyleBackColor = true;
+            radioFem.AutoSize = true;
+            radioFem.Location = new Point(62, 266);
+            radioFem.Margin = new Padding(3, 2, 3, 2);
+            radioFem.Name = "radioFem";
+            radioFem.Size = new Size(75, 19);
+            radioFem.TabIndex = 10;
+            radioFem.TabStop = true;
+            radioFem.Text = "Feminino";
+            radioFem.UseVisualStyleBackColor = true;
             // 
             // frm_Cadastro
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(712, 453);
+            ClientSize = new Size(623, 340);
             Controls.Add(grb_cadastro);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frm_Cadastro";
             Text = "Cadastro";
             Load += frm_Cadastro_Load;
@@ -307,14 +298,14 @@
         private TextBox txtNome;
         private TextBox txtSenha;
         private TextBox txtEmail;
-        private TextBox textBox5;
+        private TextBox txtTelefone;
         private GroupBox grb_cadastro;
-        private RadioButton radio_Fem;
-        private RadioButton radio_Masc;
+        private RadioButton radioFem;
+        private RadioButton radioMasc;
         private Label label1;
-        private ComboBox pais_cmbBox;
-        private ComboBox org_cmbBox;
+        private ComboBox paisCmb;
         private Label label2;
-        private DateTimePicker date_Nasc;
+        private DateTimePicker dateNasc;
+        private TextBox txtOrg;
     }
 }
