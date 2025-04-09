@@ -21,5 +21,12 @@ namespace P1_TATI
         {
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtEmail.Clear();
+            txtSenha.Clear();
+            this.Close();
+        }
     }
 }

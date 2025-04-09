@@ -28,51 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btn_entrar = new Button();
-            btn_Cancelar = new Button();
-            btn_redefinir = new Button();
+            btnEntrar = new Button();
+            btnCancelar = new Button();
+            btnRedefinir = new Button();
             lbl_usuario = new Label();
             lbl_senha = new Label();
-            txt_usuario = new TextBox();
-            txt_senha = new TextBox();
+            txtEmail = new TextBox();
+            txtSenha = new TextBox();
             SuspendLayout();
             // 
-            // btn_entrar
+            // btnEntrar
             // 
-            btn_entrar.Location = new Point(68, 119);
-            btn_entrar.Name = "btn_entrar";
-            btn_entrar.Size = new Size(75, 23);
-            btn_entrar.TabIndex = 0;
-            btn_entrar.Text = "Entrar";
-            btn_entrar.UseVisualStyleBackColor = true;
+            btnEntrar.Location = new Point(68, 119);
+            btnEntrar.Name = "btnEntrar";
+            btnEntrar.Size = new Size(75, 23);
+            btnEntrar.TabIndex = 0;
+            btnEntrar.Text = "Entrar";
+            btnEntrar.UseVisualStyleBackColor = true;
             // 
-            // btn_Cancelar
+            // btnCancelar
             // 
-            btn_Cancelar.Location = new Point(184, 119);
-            btn_Cancelar.Name = "btn_Cancelar";
-            btn_Cancelar.Size = new Size(75, 23);
-            btn_Cancelar.TabIndex = 1;
-            btn_Cancelar.Text = "Cancelar";
-            btn_Cancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Location = new Point(184, 119);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.TabIndex = 1;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
-            // btn_redefinir
+            // btnRedefinir
             // 
-            btn_redefinir.Location = new Point(299, 119);
-            btn_redefinir.Name = "btn_redefinir";
-            btn_redefinir.Size = new Size(121, 23);
-            btn_redefinir.TabIndex = 2;
-            btn_redefinir.Text = "Redefinir Senha";
-            btn_redefinir.UseVisualStyleBackColor = true;
-            btn_redefinir.Click += btn_redefinir_Click;
+            btnRedefinir.Location = new Point(299, 119);
+            btnRedefinir.Name = "btnRedefinir";
+            btnRedefinir.Size = new Size(121, 23);
+            btnRedefinir.TabIndex = 2;
+            btnRedefinir.Text = "Redefinir Senha";
+            btnRedefinir.UseVisualStyleBackColor = true;
+            btnRedefinir.Click += btn_redefinir_Click;
             // 
             // lbl_usuario
             // 
             lbl_usuario.AutoSize = true;
             lbl_usuario.Location = new Point(69, 22);
             lbl_usuario.Name = "lbl_usuario";
-            lbl_usuario.Size = new Size(50, 15);
+            lbl_usuario.Size = new Size(44, 15);
             lbl_usuario.TabIndex = 3;
-            lbl_usuario.Text = "Usuário:";
+            lbl_usuario.Text = "E-Mail:";
             // 
             // lbl_senha
             // 
@@ -83,32 +84,32 @@
             lbl_senha.TabIndex = 4;
             lbl_senha.Text = "Senha:";
             // 
-            // txt_usuario
+            // txtEmail
             // 
-            txt_usuario.Location = new Point(161, 18);
-            txt_usuario.Name = "txt_usuario";
-            txt_usuario.Size = new Size(259, 23);
-            txt_usuario.TabIndex = 5;
+            txtEmail.Location = new Point(161, 18);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(259, 23);
+            txtEmail.TabIndex = 5;
             // 
-            // txt_senha
+            // txtSenha
             // 
-            txt_senha.Location = new Point(161, 54);
-            txt_senha.Name = "txt_senha";
-            txt_senha.Size = new Size(259, 23);
-            txt_senha.TabIndex = 6;
+            txtSenha.Location = new Point(161, 54);
+            txtSenha.Name = "txtSenha";
+            txtSenha.Size = new Size(259, 23);
+            txtSenha.TabIndex = 6;
             // 
             // frm_Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(501, 165);
-            Controls.Add(txt_senha);
-            Controls.Add(txt_usuario);
+            Controls.Add(txtSenha);
+            Controls.Add(txtEmail);
             Controls.Add(lbl_senha);
             Controls.Add(lbl_usuario);
-            Controls.Add(btn_redefinir);
-            Controls.Add(btn_Cancelar);
-            Controls.Add(btn_entrar);
+            Controls.Add(btnRedefinir);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnEntrar);
             Name = "frm_Login";
             Text = "Login";
             ResumeLayout(false);
@@ -117,12 +118,12 @@
 
         #endregion
 
-        private Button btn_entrar;
-        private Button btn_Cancelar;
-        private Button btn_redefinir;
+        private Button btnEntrar;
+        private Button btnCancelar;
+        private Button btnRedefinir;
         private Label lbl_usuario;
         private Label lbl_senha;
-        private TextBox txt_usuario;
-        private TextBox txt_senha;
+        private TextBox txtEmail;
+        private TextBox txtSenha;
     }
 }

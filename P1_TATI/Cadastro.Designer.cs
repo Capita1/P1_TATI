@@ -45,7 +45,7 @@
             txtOrg = new TextBox();
             dateNasc = new DateTimePicker();
             label2 = new Label();
-            paisCmb = new ComboBox();
+            cmbPais = new ComboBox();
             label1 = new Label();
             radioMasc = new RadioButton();
             radioFem = new RadioButton();
@@ -177,7 +177,7 @@
             grb_cadastro.Controls.Add(txtOrg);
             grb_cadastro.Controls.Add(dateNasc);
             grb_cadastro.Controls.Add(label2);
-            grb_cadastro.Controls.Add(paisCmb);
+            grb_cadastro.Controls.Add(cmbPais);
             grb_cadastro.Controls.Add(label1);
             grb_cadastro.Controls.Add(radioMasc);
             grb_cadastro.Controls.Add(txtTelefone);
@@ -226,14 +226,15 @@
             label2.TabIndex = 20;
             label2.Text = "Data de nascimento:";
             // 
-            // paisCmb
+            // cmbPais
             // 
-            paisCmb.FormattingEnabled = true;
-            paisCmb.Location = new Point(162, 202);
-            paisCmb.Margin = new Padding(3, 2, 3, 2);
-            paisCmb.Name = "paisCmb";
-            paisCmb.Size = new Size(133, 23);
-            paisCmb.TabIndex = 19;
+            cmbPais.FormattingEnabled = true;
+            cmbPais.Items.AddRange(new object[] { " ", "AP \tOrganização Regional Africana da Propriedade Industrial (ARIPO)", "AR \tArgentina", "AT \tÁustria", "AU \tAustrália", "BA \tBósnia e Herzegovina", "BE \tBélgica", "BG \tBulgária", "BR \tBrazil", "CA \tCanadá", "CH \tSuíça", "CN \tChina", "CS \tChecoeslováquia (até 1993)", "CU \tCuba", "CY \tChipre", "CZ \tRepública Checa", "DD \tAlemanha, excluindo o território que, antes de 3 de Outubro de 1990, constituia a República Federal da Alemanha", "DE \tAlemanha", "DK \tDinamarca", "DZ \tArgélia", "EA \tOrganização Euroasiática de Patentes", "EE \tEstónia", "EG \tEgipto", "EP \tOrganização Europeia de Patentes (OPE/EPO)", "ES \tEspanha", "FI \tFinlândia", "FR \tFrança", "GB \tReino Unido", "GR \tGrécia", "HK \tHong Kong", "HR \tCroácia", "HU \tHungria", "IE \tIrlanda", "IL \tIsrael", "IN \tIndia", "IT \tItália", "JP \tJapão", "KE \tQuénia", "KR \tRepública da Coreia", "LT \tLituânia", "LU \tLuxemburgo", "LV \tLetónia", "MC \tMónaco", "MD \tRepública da Moldávia", "MN \tMongólia", "MT \tMalta", "MW \tMalawi", "MX \tMéxico", "MY \tMalásia", "NC \tNova Caledónia", "NL \tHolanda", "NO \tNoruega", "NZ \tNova Zelândia", "OA \tOrganização Africana da Propriedade Intelectual (OAPI)", "PH \tFilipinas", "PL \tPolónia", "PT \tPortugal", "RO \tRoménia", "RU \tFederação Russa", "SE \tSuécia", "SG \tSingapura", "SI \tEslovénia", "SK \tEslováquia", "SU \tUnião das Repúblicas Socialistas Soviéticas (URSS)", "TJ \tTadjiquistão", "TR \tTurquia", "TT \tTrindade e Tobago", "TW \tTaiwan", "US \tEstados Unidos da América", "VN \tVietname", "WO \tOrganização Mundial da Propriedade Intelectual (OMPI/WIPO)", "YU \tJugoslávia", "ZA \tÁfrica do Sul", "ZM \tZâmbia", "ZW \tZimbabwe" });
+            cmbPais.Location = new Point(162, 202);
+            cmbPais.Margin = new Padding(3, 2, 3, 2);
+            cmbPais.Name = "cmbPais";
+            cmbPais.Size = new Size(133, 23);
+            cmbPais.TabIndex = 19;
             // 
             // label1
             // 
@@ -303,7 +304,7 @@
         private RadioButton radioFem;
         private RadioButton radioMasc;
         private Label label1;
-        private ComboBox paisCmb;
+        private ComboBox cmbPais;
         private Label label2;
         private DateTimePicker dateNasc;
         private TextBox txtOrg;
