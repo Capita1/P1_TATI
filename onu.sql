@@ -9,5 +9,6 @@ CREATE TABLE usuarios (
     data DATE NOT NULL,
     pais VARCHAR(100) NOT NULL,
     org VARCHAR(100) NOT NULL,
-    sexo ENUM('M', 'F') NOT NULL
+    sexo ENUM('M', 'F') NOT NULL,
+    foto VARCHAR(100) NOT NULL
 );
