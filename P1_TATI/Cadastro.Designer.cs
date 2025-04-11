@@ -36,7 +36,7 @@
             lbl_email = new Label();
             btn_cadastrar = new Button();
             btn_limpar = new Button();
-            pictureBox1 = new PictureBox();
+            picFoto = new PictureBox();
             txtNome = new TextBox();
             txtSenha = new TextBox();
             txtEmail = new TextBox();
@@ -49,7 +49,8 @@
             label1 = new Label();
             radioMasc = new RadioButton();
             radioFem = new RadioButton();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            btnEscolher = new Button();
+            ((System.ComponentModel.ISupportInitialize)picFoto).BeginInit();
             grb_cadastro.SuspendLayout();
             SuspendLayout();
             // 
@@ -135,13 +136,13 @@
             btn_limpar.UseVisualStyleBackColor = true;
             btn_limpar.Click += btn_limpar_Click;
             // 
-            // pictureBox1
+            // picFoto
             // 
-            pictureBox1.Location = new Point(458, 26);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(127, 116);
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
+            picFoto.Location = new Point(465, 26);
+            picFoto.Name = "picFoto";
+            picFoto.Size = new Size(120, 116);
+            picFoto.TabIndex = 10;
+            picFoto.TabStop = false;
             // 
             // txtNome
             // 
@@ -174,6 +175,7 @@
             // grb_cadastro
             // 
             grb_cadastro.Anchor = AnchorStyles.None;
+            grb_cadastro.Controls.Add(btnEscolher);
             grb_cadastro.Controls.Add(txtOrg);
             grb_cadastro.Controls.Add(dateNasc);
             grb_cadastro.Controls.Add(label2);
@@ -187,7 +189,7 @@
             grb_cadastro.Controls.Add(btn_limpar);
             grb_cadastro.Controls.Add(btn_cadastrar);
             grb_cadastro.Controls.Add(txtNome);
-            grb_cadastro.Controls.Add(pictureBox1);
+            grb_cadastro.Controls.Add(picFoto);
             grb_cadastro.Controls.Add(lbl_email);
             grb_cadastro.Controls.Add(lbl_nome);
             grb_cadastro.Controls.Add(lbl_telefone);
@@ -270,6 +272,16 @@
             radioFem.Text = "Feminino";
             radioFem.UseVisualStyleBackColor = true;
             // 
+            // btnEscolher
+            // 
+            btnEscolher.Location = new Point(477, 148);
+            btnEscolher.Name = "btnEscolher";
+            btnEscolher.Size = new Size(99, 23);
+            btnEscolher.TabIndex = 24;
+            btnEscolher.Text = "Escolher foto";
+            btnEscolher.UseVisualStyleBackColor = true;
+            btnEscolher.Click += btnEscolher_Click;
+            // 
             // frm_Cadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -279,7 +291,7 @@
             Name = "frm_Cadastro";
             Text = "Cadastro";
             Load += frm_Cadastro_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picFoto).EndInit();
             grb_cadastro.ResumeLayout(false);
             grb_cadastro.PerformLayout();
             ResumeLayout(false);
@@ -295,7 +307,7 @@
         private Label lbl_email;
         private Button btn_cadastrar;
         private Button btn_limpar;
-        private PictureBox pictureBox1;
+        private PictureBox picFoto;
         private TextBox txtNome;
         private TextBox txtSenha;
         private TextBox txtEmail;
@@ -308,5 +320,6 @@
         private Label label2;
         private DateTimePicker dateNasc;
         private TextBox txtOrg;
+        private Button btnEscolher;
     }
 }

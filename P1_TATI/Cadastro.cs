@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,7 @@ namespace P1_TATI
 {
     public partial class frm_Cadastro : Form
     {
+        string foto;
         public void limparForm()
         {
             txtNome.Clear();
@@ -27,13 +29,29 @@ namespace P1_TATI
             txtOrg.Clear();
             radioFem.Checked = false;
             radioMasc.Checked = false;
+            picFoto.Image = null;
         }
         public frm_Cadastro()
         {
             InitializeComponent();
         }
+        private void btnEscolher_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Selecione uma imagem";
+            openFileDialog.Filter = "Arquivos de Imagem|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string escolhida = openFileDialog.FileName;
+                picFoto.Image = Image.FromFile(escolhida);
+                picFoto.SizeMode = PictureBoxSizeMode.Zoom;
+                foto = escolhida;
+            }
+        }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
+            
             //sigla do país
             string selecao = cmbPais.SelectedItem.ToString();
             string[] partes = selecao.Split(' ');
@@ -42,7 +60,7 @@ namespace P1_TATI
             string data = dateNasc.Value.ToString("yyyy-MM-dd");
             //secsu
             string sexo = " ";
-            if (radioFem.Checked) 
+            if (radioFem.Checked)
             {
                 sexo = "F";
             }
@@ -50,16 +68,19 @@ namespace P1_TATI
             {
                 sexo = "M";
             }
-            
+            //senha
+            string senha = BCrypt.Net.BCrypt.HashPassword(txtSenha.Text);
+
             List<string> campos = new List<string> { };
             campos.Add(txtNome.Text);
             campos.Add(txtEmail.Text);
-            campos.Add(txtSenha.Text);
+            campos.Add(senha);
             campos.Add(txtTelefone.Text);
             campos.Add(data);
             campos.Add(pais);
             campos.Add(txtOrg.Text);
             campos.Add(sexo);
+            campos.Add(foto);
 
             // Valida se os campos estão preenchidos            
             int vazios = 0;
@@ -78,7 +99,7 @@ namespace P1_TATI
                     using (var conexao = new MySqlConnection("Server=localhost;Port=3306;Database=onu;Uid=root;Pwd=1324;"))
                     {
                         conexao.Open(); // Abre a conexão
-                        string query = "INSERT INTO usuarios (nome, email, senha, telefone, data, pais, org, sexo) VALUES (@val0,@val1,@val2,@val3,@val4,@val5,@val6,@val7);";
+                        string query = "INSERT INTO usuarios (nome, email, senha, telefone, data, pais, org, sexo, foto) VALUES (@val0,@val1,@val2,@val3,@val4,@val5,@val6,@val7, @val8);";
                         using (var cmd = new MySqlCommand(query, conexao))
                         {
                             // Atribuir os valores 
@@ -90,6 +111,7 @@ namespace P1_TATI
                             cmd.Parameters.AddWithValue("@val5", campos[5]);
                             cmd.Parameters.AddWithValue("@val6", campos[6]);
                             cmd.Parameters.AddWithValue("@val7", campos[7]);
+                            cmd.Parameters.AddWithValue("@val8", campos[8]);
                             cmd.ExecuteNonQuery();// Executa o comando
                         }
                         // Mensagem e limpar campos após cadastro
@@ -116,6 +138,7 @@ namespace P1_TATI
         { }
         private void frm_Cadastro_Load(object sender, EventArgs e)
         {
+            txtSenha.UseSystemPasswordChar = true;
             cmbPais.SelectedIndex = 0;
             dateNasc.Format = DateTimePickerFormat.Custom;
             dateNasc.CustomFormat = "dd/MM/yyyy";

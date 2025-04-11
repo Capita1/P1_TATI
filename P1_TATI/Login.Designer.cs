@@ -35,6 +35,7 @@
             lbl_senha = new Label();
             txtEmail = new TextBox();
             txtSenha = new TextBox();
+            chkLembre = new CheckBox();
             SuspendLayout();
             // 
             // btnEntrar
@@ -45,6 +46,7 @@
             btnEntrar.TabIndex = 0;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = true;
+            btnEntrar.Click += btnEntrar_Click;
             // 
             // btnCancelar
             // 
@@ -98,11 +100,24 @@
             txtSenha.Size = new Size(259, 23);
             txtSenha.TabIndex = 6;
             // 
+            // chkLembre
+            // 
+            chkLembre.AutoSize = true;
+            chkLembre.Location = new Point(230, 83);
+            chkLembre.Name = "chkLembre";
+            chkLembre.RightToLeft = RightToLeft.No;
+            chkLembre.Size = new Size(100, 19);
+            chkLembre.TabIndex = 7;
+            chkLembre.Text = "Lembrar login";
+            chkLembre.UseVisualStyleBackColor = true;
+            chkLembre.CheckedChanged += checkBox1_CheckedChanged;
+            // 
             // frm_Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(501, 165);
+            Controls.Add(chkLembre);
             Controls.Add(txtSenha);
             Controls.Add(txtEmail);
             Controls.Add(lbl_senha);
@@ -112,6 +127,7 @@
             Controls.Add(btnEntrar);
             Name = "frm_Login";
             Text = "Login";
+            Load += frm_Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -125,5 +141,6 @@
         private Label lbl_senha;
         private TextBox txtEmail;
         private TextBox txtSenha;
+        private CheckBox chkLembre;
     }
 }
