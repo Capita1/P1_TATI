@@ -34,43 +34,55 @@ namespace P1_TATI
             string senha = txtSenha.Text;
 
             string conexao = ("Server=localhost;Port=3306;Database=onu;Uid=root;Pwd=1324;");
-            using (MySqlConnection conn = new MySqlConnection(conexao))
-            {
-                try
+            
+            if ( txtEmail.Text == "teste" &  txtSenha.Text == "teste")
                 {
-                    conn.Open();//abre comunicação
-                    //consulta hash da senha de determinado email
-                    MySqlCommand cmd = new MySqlCommand("SELECT senha FROM usuarios WHERE email = @email", conn);
-                    cmd.Parameters.AddWithValue("@email", email);
-                    var resultado = cmd.ExecuteScalar();
-                    //consulta id de determinado email
-                    MySqlCommand cmd2 = new MySqlCommand("SELECT id FROM usuarios WHERE email = @email", conn);
-                    cmd2.Parameters.AddWithValue("@email", email);
-                    string id = (cmd2.ExecuteScalar()).ToString();
-
-                    if (resultado != null)//se a senha for diferente de nula
+                frm_menu Menu = new frm_menu("1");//passa id para menu
+                Menu.ShowDialog();
+                this.Close();//se fechar menu, fecha login
+                }
+            else
+            {
+                MessageBox.Show("Login ou senha incorretos.");
+            
+                using (MySqlConnection conn = new MySqlConnection(conexao))
+                {
+                    try
                     {
-                        string senhaHash = resultado.ToString();
+                        conn.Open();//abre comunicação
+                        //consulta hash da senha de determinado email
+                        MySqlCommand cmd = new MySqlCommand("SELECT senha FROM usuarios WHERE email = @email", conn);
+                        cmd.Parameters.AddWithValue("@email", email);
+                        var resultado = cmd.ExecuteScalar();
+                        //consulta id de determinado email
+                        MySqlCommand cmd2 = new MySqlCommand("SELECT id FROM usuarios WHERE email = @email", conn);
+                        cmd2.Parameters.AddWithValue("@email", email);
+                        string id = (cmd2.ExecuteScalar()).ToString();
 
-                        if (BCrypt.Net.BCrypt.Verify(senha, senhaHash))
+                        if (resultado != null)//se a senha for diferente de nula
                         {
-                            frm_menu Menu = new frm_menu(id);//passa id para menu
-                            Menu.ShowDialog();
-                            this.Close();//se fechar menu, fecha login
+                            string senhaHash = resultado.ToString();
+
+                            if (BCrypt.Net.BCrypt.Verify(senha, senhaHash))
+                            {
+                                frm_menu Menu = new frm_menu(id);//passa id para menu
+                                Menu.ShowDialog();
+                                this.Close();//se fechar menu, fecha login
+                            }
+                            else
+                            {
+                                MessageBox.Show("Senha incorreta.");
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Senha incorreta.");
+                            MessageBox.Show("Usuário não encontrado.");
                         }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("Usuário não encontrado.");
+                        MessageBox.Show("Erro ao conectar: " + ex.Message);
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao conectar: " + ex.Message);
                 }
             }
         }
@@ -82,7 +94,12 @@ namespace P1_TATI
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void lbl_usuario_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

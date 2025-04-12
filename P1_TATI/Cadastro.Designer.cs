@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Cadastro));
             lbl_nome = new Label();
             lbl_senha = new Label();
             lbl_pais = new Label();
@@ -42,6 +43,7 @@
             txtEmail = new TextBox();
             txtTelefone = new TextBox();
             grb_cadastro = new GroupBox();
+            btnEscolher = new Button();
             txtOrg = new TextBox();
             dateNasc = new DateTimePicker();
             label2 = new Label();
@@ -49,7 +51,6 @@
             label1 = new Label();
             radioMasc = new RadioButton();
             radioFem = new RadioButton();
-            btnEscolher = new Button();
             ((System.ComponentModel.ISupportInitialize)picFoto).BeginInit();
             grb_cadastro.SuspendLayout();
             SuspendLayout();
@@ -138,11 +139,16 @@
             // 
             // picFoto
             // 
+            picFoto.BorderStyle = BorderStyle.FixedSingle;
+            picFoto.Image = Properties.Resources.avatar_azul;
+            picFoto.InitialImage = Properties.Resources.avatar_azul;
             picFoto.Location = new Point(465, 26);
             picFoto.Name = "picFoto";
             picFoto.Size = new Size(120, 116);
             picFoto.TabIndex = 10;
             picFoto.TabStop = false;
+            picFoto.WaitOnLoad = true;
+            picFoto.Click += picFoto_Click;
             // 
             // txtNome
             // 
@@ -203,6 +209,16 @@
             grb_cadastro.TabStop = false;
             grb_cadastro.Text = "Cadastro de imprensa";
             grb_cadastro.Enter += grb_cadastro_Enter;
+            // 
+            // btnEscolher
+            // 
+            btnEscolher.Location = new Point(477, 148);
+            btnEscolher.Name = "btnEscolher";
+            btnEscolher.Size = new Size(99, 23);
+            btnEscolher.TabIndex = 24;
+            btnEscolher.Text = "Escolher foto";
+            btnEscolher.UseVisualStyleBackColor = true;
+            btnEscolher.Click += btnEscolher_Click;
             // 
             // txtOrg
             // 
@@ -272,22 +288,13 @@
             radioFem.Text = "Feminino";
             radioFem.UseVisualStyleBackColor = true;
             // 
-            // btnEscolher
-            // 
-            btnEscolher.Location = new Point(477, 148);
-            btnEscolher.Name = "btnEscolher";
-            btnEscolher.Size = new Size(99, 23);
-            btnEscolher.TabIndex = 24;
-            btnEscolher.Text = "Escolher foto";
-            btnEscolher.UseVisualStyleBackColor = true;
-            btnEscolher.Click += btnEscolher_Click;
-            // 
             // frm_Cadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(623, 340);
             Controls.Add(grb_cadastro);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frm_Cadastro";
             Text = "Cadastro";
             Load += frm_Cadastro_Load;

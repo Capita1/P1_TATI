@@ -51,7 +51,7 @@ namespace P1_TATI
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            
+
             //sigla do país
             string selecao = cmbPais.SelectedItem.ToString();
             string[] partes = selecao.Split(' ');
@@ -142,6 +142,11 @@ namespace P1_TATI
             cmbPais.SelectedIndex = 0;
             dateNasc.Format = DateTimePickerFormat.Custom;
             dateNasc.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void picFoto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

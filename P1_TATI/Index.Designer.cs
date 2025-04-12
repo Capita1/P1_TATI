@@ -93,6 +93,7 @@
             Controls.Add(label1);
             Controls.Add(btn_Cadastrar);
             Controls.Add(btn_login);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frm_index";
             Text = "Informações para Imprensa";
             Load += frm_index_Load;
