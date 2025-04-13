@@ -74,6 +74,8 @@ namespace P1_TATI
             linkLabel1 = new LinkLabel();
             lbl_contagem = new Label();
             lbl_cont_num = new Label();
+            richTextBox2 = new RichTextBox();
+            label9 = new Label();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picFoto).BeginInit();
             groupBox1.SuspendLayout();
@@ -82,6 +84,7 @@ namespace P1_TATI
             tabControl_Menu.SuspendLayout();
             t_Page_Locais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pic_Locais).BeginInit();
+            t_Page_Acordos.SuspendLayout();
             t_Page_Religião.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -105,8 +108,9 @@ namespace P1_TATI
             // imprimirToolStripMenuItem
             // 
             imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            imprimirToolStripMenuItem.Size = new Size(120, 22);
+            imprimirToolStripMenuItem.Size = new Size(180, 22);
             imprimirToolStripMenuItem.Text = "Imprimir";
+            imprimirToolStripMenuItem.Click += imprimirToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
@@ -432,11 +436,13 @@ namespace P1_TATI
             // 
             // t_Page_Acordos
             // 
+            t_Page_Acordos.Controls.Add(label9);
+            t_Page_Acordos.Controls.Add(richTextBox2);
             t_Page_Acordos.Location = new Point(4, 24);
             t_Page_Acordos.Name = "t_Page_Acordos";
             t_Page_Acordos.Size = new Size(844, 268);
             t_Page_Acordos.TabIndex = 2;
-            t_Page_Acordos.Text = "Acordos";
+            t_Page_Acordos.Text = "Linha do Tempo";
             t_Page_Acordos.UseVisualStyleBackColor = true;
             // 
             // t_Page_Religião
@@ -511,6 +517,24 @@ namespace P1_TATI
             lbl_cont_num.Text = " ";
             lbl_cont_num.Click += lbl_cont_num_Click;
             // 
+            // richTextBox2
+            // 
+            richTextBox2.Location = new Point(34, 44);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.Size = new Size(785, 214);
+            richTextBox2.TabIndex = 0;
+            richTextBox2.Text = resources.GetString("richTextBox2.Text");
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label9.Location = new Point(34, 14);
+            label9.Name = "label9";
+            label9.Size = new Size(381, 19);
+            label9.TabIndex = 1;
+            label9.Text = "Linha do Tempo do Conflito Rússia-Ucrânia (2022-2024)";
+            // 
             // frm_menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -540,6 +564,8 @@ namespace P1_TATI
             t_Page_Locais.ResumeLayout(false);
             t_Page_Locais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pic_Locais).EndInit();
+            t_Page_Acordos.ResumeLayout(false);
+            t_Page_Acordos.PerformLayout();
             t_Page_Religião.ResumeLayout(false);
             t_Page_Religião.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -597,5 +623,7 @@ namespace P1_TATI
         private RichTextBox richTextBox1;
         private Label lbl_contagem;
         private Label lbl_cont_num;
+        private RichTextBox richTextBox2;
+        private Label label9;
     }
 }

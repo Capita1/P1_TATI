@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\Juliana\\FATEC\\T\u00F3picos Avancados em Tecnologia da Informa\u00E7\u00E3o\\Gabriel\\P1_TATI\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|c:\\users\\user\\documents\\juliana\\fatec\\t\u00F3picos avancados em tecnologia da informa\u00E7\u00E3o\\gabriel\\p1_tati\\p1_tati\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|solutionrelative:p1_tati\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|c:\\users\\user\\documents\\juliana\\fatec\\t\u00F3picos avancados em tecnologia da informa\u00E7\u00E3o\\gabriel\\p1_tati\\p1_tati\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|solutionrelative:p1_tati\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|c:\\users\\user\\documents\\juliana\\fatec\\t\u00F3picos avancados em tecnologia da informa\u00E7\u00E3o\\gabriel\\p1_tati\\p1_tati\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|solutionrelative:p1_tati\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|c:\\users\\user\\documents\\juliana\\fatec\\t\u00F3picos avancados em tecnologia da informa\u00E7\u00E3o\\gabriel\\p1_tati\\p1_tati\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|solutionrelative:p1_tati\\menu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,54 +40,8 @@
               "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Juliana\\FATEC\\T\u00F3picos Avancados em Tecnologia da Informa\u00E7\u00E3o\\Gabriel\\P1_TATI\\P1_TATI\\Login.cs",
-              "RelativeDocumentMoniker": "P1_TATI\\Login.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Juliana\\FATEC\\T\u00F3picos Avancados em Tecnologia da Informa\u00E7\u00E3o\\Gabriel\\P1_TATI\\P1_TATI\\Login.cs [Projeto]",
-              "RelativeToolTip": "P1_TATI\\Login.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T21:03:23.588Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Menu.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Juliana\\FATEC\\T\u00F3picos Avancados em Tecnologia da Informa\u00E7\u00E3o\\Gabriel\\P1_TATI\\P1_TATI\\Menu.Designer.cs",
-              "RelativeDocumentMoniker": "P1_TATI\\Menu.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Juliana\\FATEC\\T\u00F3picos Avancados em Tecnologia da Informa\u00E7\u00E3o\\Gabriel\\P1_TATI\\P1_TATI\\Menu.Designer.cs",
-              "RelativeToolTip": "P1_TATI\\Menu.Designer.cs",
-              "ViewState": "AgIAAJABAAAAAAAAAADgv60BAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T16:31:45.504Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Menu.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Juliana\\FATEC\\T\u00F3picos Avancados em Tecnologia da Informa\u00E7\u00E3o\\Gabriel\\P1_TATI\\P1_TATI\\Menu.cs",
-              "RelativeDocumentMoniker": "P1_TATI\\Menu.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Juliana\\FATEC\\T\u00F3picos Avancados em Tecnologia da Informa\u00E7\u00E3o\\Gabriel\\P1_TATI\\P1_TATI\\Menu.cs",
-              "RelativeToolTip": "P1_TATI\\Menu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T15:58:56.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Menu.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\User\\Documents\\Juliana\\FATEC\\T\u00F3picos Avancados em Tecnologia da Informa\u00E7\u00E3o\\Gabriel\\P1_TATI\\P1_TATI\\Menu.cs",
-              "RelativeDocumentMoniker": "P1_TATI\\Menu.cs",
-              "ToolTip": "C:\\Users\\User\\Documents\\Juliana\\FATEC\\T\u00F3picos Avancados em Tecnologia da Informa\u00E7\u00E3o\\Gabriel\\P1_TATI\\P1_TATI\\Menu.cs [Projeto]",
-              "RelativeToolTip": "P1_TATI\\Menu.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T15:40:03.254Z",
-              "EditorCaption": " [Projeto]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

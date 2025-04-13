@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace P1_TATI
             s_data = s_data.Substring(0, 1).ToLower() + s_data.Substring(1, s_data.Length - 1);
             toolStripStatusLabel1.Text = s_data;
 
-            
+
 
             string conexao = ("Server=localhost;Port=3306;Database=onu;Uid=root;Pwd=1324;");
             using (MySqlConnection conn = new MySqlConnection(conexao))
@@ -241,11 +242,20 @@ namespace P1_TATI
 
         }
 
-       
+        private void imprimirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += (sender, e) =>
+            {
+                Bitmap bmp = new Bitmap(dgv.Width, dgv.Height);
+                dgv.DrawToBitmap(bmp, new Rectangle(0, 0, dgv.Width, dgv.Height));
+                e.Graphics.DrawImage(bmp, e.MarginBounds);
+            };
 
-
-       
-       
+            PrintPreviewDialog preview = new PrintPreviewDialog();
+            preview.Document = pd;
+            preview.ShowDialog();
+        }
     }
-    }
+}
 }
