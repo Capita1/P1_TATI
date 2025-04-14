@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Mateus\\source\\repos\\P1_TATI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|c:\\users\\mateus\\source\\repos\\p1_tati\\p1_tati\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|solutionrelative:p1_tati\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|c:\\users\\mateus\\source\\repos\\p1_tati\\p1_tati\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|solutionrelative:p1_tati\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|c:\\users\\mateus\\source\\repos\\p1_tati\\p1_tati\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|solutionrelative:p1_tati\\cadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD250DF5-7665-4E64-8773-DBCCD6FACEC4}|P1_TATI\\P1_TATI.csproj|c:\\users\\mateus\\source\\repos\\p1_tati\\p1_tati\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -26,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\Mateus\\source\\repos\\P1_TATI\\P1_TATI\\Login.cs",
+              "RelativeDocumentMoniker": "P1_TATI\\Login.cs",
+              "ToolTip": "C:\\Users\\Mateus\\source\\repos\\P1_TATI\\P1_TATI\\Login.cs",
+              "RelativeToolTip": "P1_TATI\\Login.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAACQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T13:46:46.819Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -62,19 +75,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\Mateus\\source\\repos\\P1_TATI\\P1_TATI\\Login.cs",
-              "RelativeDocumentMoniker": "P1_TATI\\Login.cs",
-              "ToolTip": "C:\\Users\\Mateus\\source\\repos\\P1_TATI\\P1_TATI\\Login.cs",
-              "RelativeToolTip": "P1_TATI\\Login.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T13:46:46.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Login.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Mateus\\source\\repos\\P1_TATI\\P1_TATI\\Login.cs",
@@ -87,7 +87,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Cadastro.cs",
               "DocumentMoniker": "C:\\Users\\Mateus\\source\\repos\\P1_TATI\\P1_TATI\\Cadastro.cs",
               "RelativeDocumentMoniker": "P1_TATI\\Cadastro.cs",
