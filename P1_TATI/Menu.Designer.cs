@@ -35,7 +35,6 @@ namespace P1_TATI
             estatísticaToolStripMenuItem = new ToolStripMenuItem();
             imprimirToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
-            coletivasDeImprensaToolStripMenuItem = new ToolStripMenuItem();
             lblNome = new Label();
             picFoto = new PictureBox();
             lblEmail = new Label();
@@ -91,7 +90,7 @@ namespace P1_TATI
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { estatísticaToolStripMenuItem, coletivasDeImprensaToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { estatísticaToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(893, 24);
@@ -108,22 +107,16 @@ namespace P1_TATI
             // imprimirToolStripMenuItem
             // 
             imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            imprimirToolStripMenuItem.Size = new Size(120, 22);
+            imprimirToolStripMenuItem.Size = new Size(180, 22);
             imprimirToolStripMenuItem.Text = "Imprimir";
             imprimirToolStripMenuItem.Click += imprimirToolStripMenuItem_Click;
             // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(120, 22);
+            sairToolStripMenuItem.Size = new Size(180, 22);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
-            // 
-            // coletivasDeImprensaToolStripMenuItem
-            // 
-            coletivasDeImprensaToolStripMenuItem.Name = "coletivasDeImprensaToolStripMenuItem";
-            coletivasDeImprensaToolStripMenuItem.Size = new Size(50, 20);
-            coletivasDeImprensaToolStripMenuItem.Text = "Ajuda";
             // 
             // lblNome
             // 
@@ -574,7 +567,6 @@ namespace P1_TATI
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem estatísticaToolStripMenuItem;
-        private ToolStripMenuItem coletivasDeImprensaToolStripMenuItem;
         private Label lblNome;
         private PictureBox picFoto;
         private Label lblEmail;
