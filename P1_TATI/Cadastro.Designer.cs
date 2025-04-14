@@ -59,9 +59,9 @@
             // 
             lbl_nome.AutoSize = true;
             lbl_nome.ImageAlign = ContentAlignment.MiddleRight;
-            lbl_nome.Location = new Point(16, 26);
+            lbl_nome.Location = new Point(18, 35);
             lbl_nome.Name = "lbl_nome";
-            lbl_nome.Size = new Size(99, 15);
+            lbl_nome.Size = new Size(123, 20);
             lbl_nome.TabIndex = 0;
             lbl_nome.Text = "Nome Completo:";
             // 
@@ -69,9 +69,9 @@
             // 
             lbl_senha.AutoSize = true;
             lbl_senha.ImageAlign = ContentAlignment.MiddleRight;
-            lbl_senha.Location = new Point(16, 57);
+            lbl_senha.Location = new Point(18, 76);
             lbl_senha.Name = "lbl_senha";
-            lbl_senha.Size = new Size(42, 15);
+            lbl_senha.Size = new Size(52, 20);
             lbl_senha.TabIndex = 2;
             lbl_senha.Text = "Senha:";
             // 
@@ -79,9 +79,9 @@
             // 
             lbl_pais.AutoSize = true;
             lbl_pais.ImageAlign = ContentAlignment.MiddleRight;
-            lbl_pais.Location = new Point(16, 205);
+            lbl_pais.Location = new Point(18, 273);
             lbl_pais.Name = "lbl_pais";
-            lbl_pais.Size = new Size(31, 15);
+            lbl_pais.Size = new Size(37, 20);
             lbl_pais.TabIndex = 3;
             lbl_pais.Text = "País:";
             // 
@@ -89,9 +89,9 @@
             // 
             lbl_emissora.AutoSize = true;
             lbl_emissora.ImageAlign = ContentAlignment.MiddleRight;
-            lbl_emissora.Location = new Point(16, 234);
+            lbl_emissora.Location = new Point(18, 312);
             lbl_emissora.Name = "lbl_emissora";
-            lbl_emissora.Size = new Size(128, 15);
+            lbl_emissora.Size = new Size(161, 20);
             lbl_emissora.TabIndex = 5;
             lbl_emissora.Text = "Emissora/Organização:";
             // 
@@ -99,9 +99,9 @@
             // 
             lbl_telefone.AutoSize = true;
             lbl_telefone.ImageAlign = ContentAlignment.MiddleRight;
-            lbl_telefone.Location = new Point(16, 115);
+            lbl_telefone.Location = new Point(18, 153);
             lbl_telefone.Name = "lbl_telefone";
-            lbl_telefone.Size = new Size(54, 15);
+            lbl_telefone.Size = new Size(69, 20);
             lbl_telefone.TabIndex = 6;
             lbl_telefone.Text = "Telefone:";
             // 
@@ -109,9 +109,9 @@
             // 
             lbl_email.AutoSize = true;
             lbl_email.ImageAlign = ContentAlignment.MiddleRight;
-            lbl_email.Location = new Point(16, 86);
+            lbl_email.Location = new Point(18, 115);
             lbl_email.Name = "lbl_email";
-            lbl_email.Size = new Size(44, 15);
+            lbl_email.Size = new Size(55, 20);
             lbl_email.TabIndex = 7;
             lbl_email.Text = "E-mail:";
             // 
@@ -119,9 +119,10 @@
             // 
             btn_cadastrar.BackColor = SystemColors.HotTrack;
             btn_cadastrar.ForeColor = Color.White;
-            btn_cadastrar.Location = new Point(429, 297);
+            btn_cadastrar.Location = new Point(596, 396);
+            btn_cadastrar.Margin = new Padding(3, 4, 3, 4);
             btn_cadastrar.Name = "btn_cadastrar";
-            btn_cadastrar.Size = new Size(75, 23);
+            btn_cadastrar.Size = new Size(86, 31);
             btn_cadastrar.TabIndex = 8;
             btn_cadastrar.Text = "Cadastrar";
             btn_cadastrar.UseVisualStyleBackColor = false;
@@ -129,9 +130,10 @@
             // 
             // btn_limpar
             // 
-            btn_limpar.Location = new Point(521, 297);
+            btn_limpar.Location = new Point(504, 396);
+            btn_limpar.Margin = new Padding(3, 4, 3, 4);
             btn_limpar.Name = "btn_limpar";
-            btn_limpar.Size = new Size(75, 23);
+            btn_limpar.Size = new Size(86, 31);
             btn_limpar.TabIndex = 9;
             btn_limpar.Text = "Limpar";
             btn_limpar.UseVisualStyleBackColor = true;
@@ -142,9 +144,10 @@
             picFoto.BorderStyle = BorderStyle.FixedSingle;
             picFoto.Image = Properties.Resources.avatar_azul;
             picFoto.InitialImage = Properties.Resources.avatar_azul;
-            picFoto.Location = new Point(465, 26);
+            picFoto.Location = new Point(531, 35);
+            picFoto.Margin = new Padding(3, 4, 3, 4);
             picFoto.Name = "picFoto";
-            picFoto.Size = new Size(120, 116);
+            picFoto.Size = new Size(137, 154);
             picFoto.TabIndex = 10;
             picFoto.TabStop = false;
             picFoto.WaitOnLoad = true;
@@ -152,30 +155,34 @@
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(129, 24);
+            txtNome.Location = new Point(147, 32);
+            txtNome.Margin = new Padding(3, 4, 3, 4);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(305, 23);
+            txtNome.Size = new Size(348, 27);
             txtNome.TabIndex = 11;
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(129, 55);
+            txtSenha.Location = new Point(147, 73);
+            txtSenha.Margin = new Padding(3, 4, 3, 4);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(305, 23);
+            txtSenha.Size = new Size(348, 27);
             txtSenha.TabIndex = 13;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(129, 87);
+            txtEmail.Location = new Point(147, 116);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(305, 23);
+            txtEmail.Size = new Size(348, 27);
             txtEmail.TabIndex = 14;
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(129, 113);
+            txtTelefone.Location = new Point(147, 151);
+            txtTelefone.Margin = new Padding(3, 4, 3, 4);
             txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(305, 23);
+            txtTelefone.Size = new Size(348, 27);
             txtTelefone.TabIndex = 15;
             // 
             // grb_cadastro
@@ -202,9 +209,11 @@
             grb_cadastro.Controls.Add(lbl_emissora);
             grb_cadastro.Controls.Add(lbl_senha);
             grb_cadastro.Controls.Add(lbl_pais);
-            grb_cadastro.Location = new Point(10, 4);
+            grb_cadastro.Location = new Point(11, 5);
+            grb_cadastro.Margin = new Padding(3, 4, 3, 4);
             grb_cadastro.Name = "grb_cadastro";
-            grb_cadastro.Size = new Size(602, 326);
+            grb_cadastro.Padding = new Padding(3, 4, 3, 4);
+            grb_cadastro.Size = new Size(688, 435);
             grb_cadastro.TabIndex = 16;
             grb_cadastro.TabStop = false;
             grb_cadastro.Text = "Cadastro de imprensa";
@@ -212,9 +221,10 @@
             // 
             // btnEscolher
             // 
-            btnEscolher.Location = new Point(477, 148);
+            btnEscolher.Location = new Point(545, 197);
+            btnEscolher.Margin = new Padding(3, 4, 3, 4);
             btnEscolher.Name = "btnEscolher";
-            btnEscolher.Size = new Size(99, 23);
+            btnEscolher.Size = new Size(113, 31);
             btnEscolher.TabIndex = 24;
             btnEscolher.Text = "Escolher foto";
             btnEscolher.UseVisualStyleBackColor = true;
@@ -222,25 +232,27 @@
             // 
             // txtOrg
             // 
-            txtOrg.Location = new Point(162, 230);
+            txtOrg.Location = new Point(185, 307);
+            txtOrg.Margin = new Padding(3, 4, 3, 4);
             txtOrg.Name = "txtOrg";
-            txtOrg.Size = new Size(133, 23);
+            txtOrg.Size = new Size(151, 27);
             txtOrg.TabIndex = 23;
             // 
             // dateNasc
             // 
-            dateNasc.Location = new Point(162, 172);
+            dateNasc.Location = new Point(185, 229);
+            dateNasc.Margin = new Padding(3, 4, 3, 4);
             dateNasc.Name = "dateNasc";
-            dateNasc.Size = new Size(133, 23);
+            dateNasc.Size = new Size(151, 27);
             dateNasc.TabIndex = 22;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.ImageAlign = ContentAlignment.MiddleRight;
-            label2.Location = new Point(16, 177);
+            label2.Location = new Point(18, 236);
             label2.Name = "label2";
-            label2.Size = new Size(115, 15);
+            label2.Size = new Size(145, 20);
             label2.TabIndex = 20;
             label2.Text = "Data de nascimento:";
             // 
@@ -248,29 +260,27 @@
             // 
             cmbPais.FormattingEnabled = true;
             cmbPais.Items.AddRange(new object[] { " ", "AP \tOrganização Regional Africana da Propriedade Industrial (ARIPO)", "AR \tArgentina", "AT \tÁustria", "AU \tAustrália", "BA \tBósnia e Herzegovina", "BE \tBélgica", "BG \tBulgária", "BR \tBrazil", "CA \tCanadá", "CH \tSuíça", "CN \tChina", "CS \tChecoeslováquia (até 1993)", "CU \tCuba", "CY \tChipre", "CZ \tRepública Checa", "DD \tAlemanha, excluindo o território que, antes de 3 de Outubro de 1990, constituia a República Federal da Alemanha", "DE \tAlemanha", "DK \tDinamarca", "DZ \tArgélia", "EA \tOrganização Euroasiática de Patentes", "EE \tEstónia", "EG \tEgipto", "EP \tOrganização Europeia de Patentes (OPE/EPO)", "ES \tEspanha", "FI \tFinlândia", "FR \tFrança", "GB \tReino Unido", "GR \tGrécia", "HK \tHong Kong", "HR \tCroácia", "HU \tHungria", "IE \tIrlanda", "IL \tIsrael", "IN \tIndia", "IT \tItália", "JP \tJapão", "KE \tQuénia", "KR \tRepública da Coreia", "LT \tLituânia", "LU \tLuxemburgo", "LV \tLetónia", "MC \tMónaco", "MD \tRepública da Moldávia", "MN \tMongólia", "MT \tMalta", "MW \tMalawi", "MX \tMéxico", "MY \tMalásia", "NC \tNova Caledónia", "NL \tHolanda", "NO \tNoruega", "NZ \tNova Zelândia", "OA \tOrganização Africana da Propriedade Intelectual (OAPI)", "PH \tFilipinas", "PL \tPolónia", "PT \tPortugal", "RO \tRoménia", "RU \tFederação Russa", "SE \tSuécia", "SG \tSingapura", "SI \tEslovénia", "SK \tEslováquia", "SU \tUnião das Repúblicas Socialistas Soviéticas (URSS)", "TJ \tTadjiquistão", "TR \tTurquia", "TT \tTrindade e Tobago", "TW \tTaiwan", "US \tEstados Unidos da América", "VN \tVietname", "WO \tOrganização Mundial da Propriedade Intelectual (OMPI/WIPO)", "YU \tJugoslávia", "ZA \tÁfrica do Sul", "ZM \tZâmbia", "ZW \tZimbabwe" });
-            cmbPais.Location = new Point(162, 202);
-            cmbPais.Margin = new Padding(3, 2, 3, 2);
+            cmbPais.Location = new Point(185, 269);
             cmbPais.Name = "cmbPais";
-            cmbPais.Size = new Size(133, 23);
+            cmbPais.Size = new Size(151, 28);
             cmbPais.TabIndex = 19;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.ImageAlign = ContentAlignment.MiddleRight;
-            label1.Location = new Point(18, 267);
+            label1.Location = new Point(21, 356);
             label1.Name = "label1";
-            label1.Size = new Size(35, 15);
+            label1.Size = new Size(44, 20);
             label1.TabIndex = 17;
             label1.Text = "Sexo:";
             // 
             // radioMasc
             // 
             radioMasc.AutoSize = true;
-            radioMasc.Location = new Point(147, 266);
-            radioMasc.Margin = new Padding(3, 2, 3, 2);
+            radioMasc.Location = new Point(168, 355);
             radioMasc.Name = "radioMasc";
-            radioMasc.Size = new Size(80, 19);
+            radioMasc.Size = new Size(97, 24);
             radioMasc.TabIndex = 16;
             radioMasc.TabStop = true;
             radioMasc.Text = "Masculino";
@@ -279,10 +289,9 @@
             // radioFem
             // 
             radioFem.AutoSize = true;
-            radioFem.Location = new Point(62, 266);
-            radioFem.Margin = new Padding(3, 2, 3, 2);
+            radioFem.Location = new Point(71, 355);
             radioFem.Name = "radioFem";
-            radioFem.Size = new Size(75, 19);
+            radioFem.Size = new Size(91, 24);
             radioFem.TabIndex = 10;
             radioFem.TabStop = true;
             radioFem.Text = "Feminino";
@@ -290,11 +299,12 @@
             // 
             // frm_Cadastro
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(623, 340);
+            ClientSize = new Size(712, 453);
             Controls.Add(grb_cadastro);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frm_Cadastro";
             Text = "Cadastro";
             Load += frm_Cadastro_Load;

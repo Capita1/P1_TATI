@@ -31,19 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Login));
             btnEntrar = new Button();
             btnCancelar = new Button();
-            btnRedefinir = new Button();
             lbl_usuario = new Label();
             lbl_senha = new Label();
             txtEmail = new TextBox();
             txtSenha = new TextBox();
-            chkLembre = new CheckBox();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnEntrar
             // 
-            btnEntrar.Location = new Point(78, 159);
+            btnEntrar.Location = new Point(375, 121);
             btnEntrar.Margin = new Padding(3, 4, 3, 4);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(86, 31);
@@ -54,7 +52,7 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(210, 159);
+            btnCancelar.Location = new Point(283, 121);
             btnCancelar.Margin = new Padding(3, 4, 3, 4);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(86, 31);
@@ -62,17 +60,6 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
-            // 
-            // btnRedefinir
-            // 
-            btnRedefinir.Location = new Point(342, 159);
-            btnRedefinir.Margin = new Padding(3, 4, 3, 4);
-            btnRedefinir.Name = "btnRedefinir";
-            btnRedefinir.Size = new Size(138, 31);
-            btnRedefinir.TabIndex = 2;
-            btnRedefinir.Text = "Redefinir Senha";
-            btnRedefinir.UseVisualStyleBackColor = true;
-            btnRedefinir.Click += btn_redefinir_Click;
             // 
             // lbl_usuario
             // 
@@ -115,19 +102,6 @@
             txtSenha.Size = new Size(363, 27);
             txtSenha.TabIndex = 6;
             // 
-            // chkLembre
-            // 
-            chkLembre.AutoSize = true;
-            chkLembre.Location = new Point(160, 120);
-            chkLembre.Margin = new Padding(3, 4, 3, 4);
-            chkLembre.Name = "chkLembre";
-            chkLembre.RightToLeft = RightToLeft.No;
-            chkLembre.Size = new Size(124, 24);
-            chkLembre.TabIndex = 7;
-            chkLembre.Text = "Lembrar login";
-            chkLembre.UseVisualStyleBackColor = true;
-            chkLembre.CheckedChanged += checkBox1_CheckedChanged;
-            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.AllowDrop = true;
@@ -140,7 +114,7 @@
             tableLayoutPanel1.Controls.Add(lbl_senha, 0, 1);
             tableLayoutPanel1.Controls.Add(txtSenha, 1, 1);
             tableLayoutPanel1.Controls.Add(txtEmail, 1, 0);
-            tableLayoutPanel1.Location = new Point(78, 16);
+            tableLayoutPanel1.Location = new Point(14, 13);
             tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
@@ -153,10 +127,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(573, 220);
+            ClientSize = new Size(473, 162);
             Controls.Add(tableLayoutPanel1);
-            Controls.Add(chkLembre);
-            Controls.Add(btnRedefinir);
             Controls.Add(btnCancelar);
             Controls.Add(btnEntrar);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -167,19 +139,16 @@
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Button btnEntrar;
         private Button btnCancelar;
-        private Button btnRedefinir;
         private Label lbl_usuario;
         private Label lbl_senha;
         private TextBox txtEmail;
         private TextBox txtSenha;
-        private CheckBox chkLembre;
         private TableLayoutPanel tableLayoutPanel1;
     }
 }

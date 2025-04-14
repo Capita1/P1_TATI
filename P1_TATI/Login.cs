@@ -18,12 +18,6 @@ namespace P1_TATI
         {
             InitializeComponent();
         }
-
-        private void btn_redefinir_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
