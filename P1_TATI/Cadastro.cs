@@ -18,6 +18,7 @@ namespace P1_TATI
     public partial class frm_Cadastro : Form
     {
         string foto;
+        string server = "Server=localhost;Port=3306;Database=onu;Uid=root;Pwd=1324;";
         public void limparForm()
         {
             txtNome.Clear();
@@ -96,7 +97,7 @@ namespace P1_TATI
                 try
                 {
                     // Conectar ao banco de dados MySQL
-                    using (var conexao = new MySqlConnection("Server=localhost;Port=3306;Database=onu;Uid=root;Pwd=1324;"))
+                    using (var conexao = new MySqlConnection(server))
                     {
                         conexao.Open(); // Abre a conexão
                         string query = "INSERT INTO usuarios (nome, email, senha, telefone, data, pais, org, sexo, foto) VALUES (@val0,@val1,@val2,@val3,@val4,@val5,@val6,@val7, @val8);";

@@ -244,6 +244,7 @@ namespace P1_TATI
 
         private void imprimirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            DataGridView dgv = new DataGridView();
             PrintDocument pd = new PrintDocument();
             pd.PrintPage += (sender, e) =>
             {
@@ -257,5 +258,4 @@ namespace P1_TATI
             preview.ShowDialog();
         }
     }
-}
 }

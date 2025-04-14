@@ -13,6 +13,7 @@ namespace P1_TATI
 {
     public partial class frm_Login : Form
     {
+        string server = "Server=localhost;Port=3306;Database=onu;Uid=root;Pwd=1324;";
         public frm_Login()
         {
             InitializeComponent();
@@ -33,59 +34,49 @@ namespace P1_TATI
             string email = txtEmail.Text.Trim();
             string senha = txtSenha.Text;
 
-            string conexao = ("Server=localhost;Port=3306;Database=onu;Uid=root;Pwd=1324;");
-            
-            if ( txtEmail.Text == "teste" &  txtSenha.Text == "teste")
-                {
-                frm_menu Menu = new frm_menu("1");//passa id para menu
-                Menu.ShowDialog();
-                this.Close();//se fechar menu, fecha login
-                }
-            else
+            string conexao = (server);
+    
+            using (MySqlConnection conn = new MySqlConnection(conexao))
             {
-                MessageBox.Show("Login ou senha incorretos.");
-            
-                using (MySqlConnection conn = new MySqlConnection(conexao))
+                try
                 {
-                    try
+                    conn.Open();//abre comunicação
+                    //consulta hash da senha de determinado email
+                    MySqlCommand cmd = new MySqlCommand("SELECT senha FROM usuarios WHERE email = @email", conn);
+                    cmd.Parameters.AddWithValue("@email", email);
+                    var resultado = cmd.ExecuteScalar();
+                    //consulta id de determinado email
+                    MySqlCommand cmd2 = new MySqlCommand("SELECT id FROM usuarios WHERE email = @email", conn);
+                    cmd2.Parameters.AddWithValue("@email", email);
+                    string id = (cmd2.ExecuteScalar()).ToString();
+
+                    if (resultado != null)//se a senha for diferente de nula
                     {
-                        conn.Open();//abre comunicação
-                        //consulta hash da senha de determinado email
-                        MySqlCommand cmd = new MySqlCommand("SELECT senha FROM usuarios WHERE email = @email", conn);
-                        cmd.Parameters.AddWithValue("@email", email);
-                        var resultado = cmd.ExecuteScalar();
-                        //consulta id de determinado email
-                        MySqlCommand cmd2 = new MySqlCommand("SELECT id FROM usuarios WHERE email = @email", conn);
-                        cmd2.Parameters.AddWithValue("@email", email);
-                        string id = (cmd2.ExecuteScalar()).ToString();
+                        string senhaHash = resultado.ToString();
 
-                        if (resultado != null)//se a senha for diferente de nula
+                        if (BCrypt.Net.BCrypt.Verify(senha, senhaHash))
                         {
-                            string senhaHash = resultado.ToString();
-
-                            if (BCrypt.Net.BCrypt.Verify(senha, senhaHash))
-                            {
-                                frm_menu Menu = new frm_menu(id);//passa id para menu
-                                Menu.ShowDialog();
-                                this.Close();//se fechar menu, fecha login
-                            }
-                            else
-                            {
-                                MessageBox.Show("Senha incorreta.");
-                            }
+                            frm_menu Menu = new frm_menu(id);//passa id para menu
+                            Menu.ShowDialog();
+                            this.Close();//se fechar menu, fecha login
                         }
                         else
                         {
-                            MessageBox.Show("Usuário não encontrado.");
+                            MessageBox.Show("Senha incorreta.");
                         }
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        MessageBox.Show("Erro ao conectar: " + ex.Message);
+                        MessageBox.Show("Usuário não encontrado.");
                     }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao conectar: " + ex.Message);
                 }
             }
         }
+        
 
         private void frm_Login_Load(object sender, EventArgs e)
         {

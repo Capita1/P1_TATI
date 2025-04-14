@@ -43,9 +43,10 @@
             // 
             // btnEntrar
             // 
-            btnEntrar.Location = new Point(68, 119);
+            btnEntrar.Location = new Point(78, 159);
+            btnEntrar.Margin = new Padding(3, 4, 3, 4);
             btnEntrar.Name = "btnEntrar";
-            btnEntrar.Size = new Size(75, 23);
+            btnEntrar.Size = new Size(86, 31);
             btnEntrar.TabIndex = 0;
             btnEntrar.Text = "Entrar";
             btnEntrar.UseVisualStyleBackColor = true;
@@ -53,9 +54,10 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(184, 119);
+            btnCancelar.Location = new Point(210, 159);
+            btnCancelar.Margin = new Padding(3, 4, 3, 4);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.Size = new Size(86, 31);
             btnCancelar.TabIndex = 1;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -63,9 +65,10 @@
             // 
             // btnRedefinir
             // 
-            btnRedefinir.Location = new Point(299, 119);
+            btnRedefinir.Location = new Point(342, 159);
+            btnRedefinir.Margin = new Padding(3, 4, 3, 4);
             btnRedefinir.Name = "btnRedefinir";
-            btnRedefinir.Size = new Size(121, 23);
+            btnRedefinir.Size = new Size(138, 31);
             btnRedefinir.TabIndex = 2;
             btnRedefinir.Text = "Redefinir Senha";
             btnRedefinir.UseVisualStyleBackColor = true;
@@ -77,7 +80,7 @@
             lbl_usuario.AutoSize = true;
             lbl_usuario.Location = new Point(3, 0);
             lbl_usuario.Name = "lbl_usuario";
-            lbl_usuario.Size = new Size(63, 37);
+            lbl_usuario.Size = new Size(72, 50);
             lbl_usuario.TabIndex = 3;
             lbl_usuario.Text = "E-Mail:";
             lbl_usuario.TextAlign = ContentAlignment.MiddleRight;
@@ -87,9 +90,9 @@
             // 
             lbl_senha.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lbl_senha.AutoSize = true;
-            lbl_senha.Location = new Point(3, 37);
+            lbl_senha.Location = new Point(3, 50);
             lbl_senha.Name = "lbl_senha";
-            lbl_senha.Size = new Size(63, 38);
+            lbl_senha.Size = new Size(72, 50);
             lbl_senha.TabIndex = 4;
             lbl_senha.Text = "Senha:";
             lbl_senha.TextAlign = ContentAlignment.MiddleRight;
@@ -97,26 +100,29 @@
             // txtEmail
             // 
             txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtEmail.Location = new Point(72, 3);
+            txtEmail.Location = new Point(81, 4);
+            txtEmail.Margin = new Padding(3, 4, 3, 4);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(316, 23);
+            txtEmail.Size = new Size(363, 27);
             txtEmail.TabIndex = 5;
             // 
             // txtSenha
             // 
             txtSenha.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtSenha.Location = new Point(72, 40);
+            txtSenha.Location = new Point(81, 54);
+            txtSenha.Margin = new Padding(3, 4, 3, 4);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(316, 23);
+            txtSenha.Size = new Size(363, 27);
             txtSenha.TabIndex = 6;
             // 
             // chkLembre
             // 
             chkLembre.AutoSize = true;
-            chkLembre.Location = new Point(140, 90);
+            chkLembre.Location = new Point(160, 120);
+            chkLembre.Margin = new Padding(3, 4, 3, 4);
             chkLembre.Name = "chkLembre";
             chkLembre.RightToLeft = RightToLeft.No;
-            chkLembre.Size = new Size(100, 19);
+            chkLembre.Size = new Size(124, 24);
             chkLembre.TabIndex = 7;
             chkLembre.Text = "Lembrar login";
             chkLembre.UseVisualStyleBackColor = true;
@@ -134,25 +140,27 @@
             tableLayoutPanel1.Controls.Add(lbl_senha, 0, 1);
             tableLayoutPanel1.Controls.Add(txtSenha, 1, 1);
             tableLayoutPanel1.Controls.Add(txtEmail, 1, 0);
-            tableLayoutPanel1.Location = new Point(68, 12);
+            tableLayoutPanel1.Location = new Point(78, 16);
+            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(391, 75);
+            tableLayoutPanel1.Size = new Size(447, 100);
             tableLayoutPanel1.TabIndex = 8;
             // 
             // frm_Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(501, 165);
+            ClientSize = new Size(573, 220);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(chkLembre);
             Controls.Add(btnRedefinir);
             Controls.Add(btnCancelar);
             Controls.Add(btnEntrar);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frm_Login";
             Text = "Login";
             Load += frm_Login_Load;
